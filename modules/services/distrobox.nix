@@ -2,6 +2,10 @@
 
 {
   virtualisation.podman.enable = true;
-  programs.distrobox.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    distrobox
+  ];
+  
 }
 
