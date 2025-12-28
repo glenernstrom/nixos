@@ -4,8 +4,7 @@
   home.packages = with pkgs; [
     pymol
     nucleus
-    positron
-    python3
+    positron-bin
     rWrapper
   ];
 }
