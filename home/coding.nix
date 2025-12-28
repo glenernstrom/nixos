@@ -6,8 +6,18 @@
 
   home.packages = with pkgs; [
     ghostty
-    jupyterlab
-    python3
-    ipython
   ];
-}
+
+
+  home.packages = with pkgs; [
+    (python313.withPackages (ps: with ps; [
+      jupyterlab
+      ipython
+      numpy
+      scipy
+      pandas
+      matplotlib
+    ]))
+  ];
+ }
+
