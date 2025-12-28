@@ -5,7 +5,7 @@
     texlive.combined.scheme-full
     texmaker
     libreoffice
-    gnome.citations
+    citations
     joplin-desktop
     jabref
     ];
