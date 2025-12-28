@@ -6,8 +6,8 @@
   services.xserver.enable = true;
 
   services.displayManager.gdm.enable = true;
-  services.displayManager.gdm.autoLogin.enable = true;
-  services.displayManager.gdm.autoLogin.user = "otterbrain";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "otterbrain";
   services.desktopManager.gnome.enable = true;
 
   # GNOME needs deconf
