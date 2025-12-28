@@ -1,6 +1,6 @@
 {
   users.users.otterbrain = {
-    dscription = "Glen Ernstrom";
+    description = "Glen Ernstrom";
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "audio" "video" ];
   };
