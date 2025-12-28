@@ -14,7 +14,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
 
-    hardware.opengl.enable = true;
+   hardware.graphics.enable = true;
 
   # https://discourse.nixos.org/t/black-screen-after-suspend-hibernate-with-nvidia/54341/6
   # https://discourse.nixos.org/t/suspend-problem/54033/28
