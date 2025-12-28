@@ -4,7 +4,7 @@
 
   powerManagement.enable = true;
 
-  services.logind.lidSwitch = "suspend";
+  services.logind.settings.Login.HandleLidSwitch = "suspend";
 
   services.tlp.enable = true;
 
