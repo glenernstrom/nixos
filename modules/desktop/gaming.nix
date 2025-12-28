@@ -1,7 +1,12 @@
 { pkgs, ... }:
 
 {
-  programs.steam.enable = true;
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+  };
+
   hardware.steam-hardware.enable = true;
 
 #  hardware.gamemode.enable = true;
