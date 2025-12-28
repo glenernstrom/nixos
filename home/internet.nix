@@ -11,5 +11,6 @@
     microsoft-edge
     firefox
     chromium
+    pcloud
   ];
 }
