@@ -7,9 +7,6 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
-  # GNOME needs dconf
-  programs.dconf.enable = true;
-
   # GNOME keyring (needed for Git, browsers, Wi-Fi, etc.)
   services.gnome.gnome-keyring.enable = true;
 
