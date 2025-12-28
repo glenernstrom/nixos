@@ -6,10 +6,9 @@
 
   home.packages = with pkgs; [
     ghostty
-  ];
 
 
-  home.packages = with pkgs; [
+  # Python 3.13 + Jupyter environment
     (python313.withPackages (ps: with ps; [
       jupyterlab
       ipython
@@ -18,6 +17,6 @@
       pandas
       matplotlib
     ]))
-  ];
+   ];
  }
 
