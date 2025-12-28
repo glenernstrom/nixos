@@ -9,6 +9,7 @@
     git
     curl
     wget
+    xorg.xhost
   ];
 
   services.dbus.enable = true;
