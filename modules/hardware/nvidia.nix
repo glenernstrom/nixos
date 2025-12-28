@@ -17,7 +17,7 @@
     hardware.opengl = {
       enable = true;
       driSupport = true;
-      driSupport32bit = true;
+     # driSupport32bit = true;
     };
 
   # https://discourse.nixos.org/t/black-screen-after-suspend-hibernate-with-nvidia/54341/6
