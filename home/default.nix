@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
   {
-    home-manager.users.glen = {
+    home-manager.users.otterbrain = {
       imports = [
       #  ./cli.nix
         ./git.nix
@@ -19,5 +19,5 @@
         ];
 
         home.stateVersion = "25.11";
-    }
+    };
   }
