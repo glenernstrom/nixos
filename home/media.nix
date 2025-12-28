@@ -3,7 +3,7 @@
 { 
   home.packages = with pkgs; [
     obs-studio
-    kdenlive
+    kdePackages.kdenlive
     kooha
     audacity
     vlc
