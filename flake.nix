@@ -13,10 +13,15 @@
   outputs = { self, nixpkgs, home-manager, ... }:
   let
     system = "x86_64-linux";
+
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
   in {
     nixosConfigurations = {
       mondrian = nixpkgs.lib.nixosSystem {
-        inherit system;
+        inherit system pkgs;
 	modules = [
 	  ./hosts/mondrian
 	  ./roles/laptop.nix
@@ -29,7 +34,7 @@
       };
 
       ernst = nixpkgs.lib.nixosSystem {
-        inherit system;
+        inherit system pkgs;
 	modules = [
 	  ./hosts/ernst
 	  ./roles/laptop.nix
@@ -42,7 +47,7 @@
        };
 
       calder = nixpkgs.lib.nixosSystem {
-        inherit system;
+        inherit system pkgs;
 	modules = [
 	  ./hosts/calder
 	  ./roles/desktop.nix
@@ -55,7 +60,7 @@
        };
 
        rothko = nixpkgs.lib.nixosSystem {
-        inherit system;
+        inherit system pkgs;
 	modules = [
 	  ./hosts/rothko
 	  ./roles/laptop.nix
