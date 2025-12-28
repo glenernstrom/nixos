@@ -1,16 +1,26 @@
 { pkgs, ... }:
 
 {
+
+  # Display server + GNOME
   services.xserver.enable = true;
 
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
 
+  # GNOME needs deconf
   programs.dconf.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    gnome-tweaks
-    gnome-extension-manager
+
+  # GNOME keyring (needed for Git, browsers, Wi-Fi, etc.)
+  services.gnome.gnome-keyring.enable = true;
+
+  # Portals (Wayland + Flatpak compatibility, even if you don’t use Flatpak)
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = with pkgs; [
+    xdg-desktop-portal-gnome
   ];
-}
+
+
+ }
 
