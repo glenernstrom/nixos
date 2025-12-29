@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     distrobox
     podman
+    distroshelf
   ];
   
 }
