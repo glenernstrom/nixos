@@ -1,7 +1,9 @@
 { pkgs, ... }:
 
-  {
-    home-manager.users.otterbrain = {
+{
+  home-manager.backupFileExtension = "bak";
+
+  home-manager.users.otterbrain = {
       imports = [
         ./cli.nix
         ./git.nix
@@ -20,5 +22,5 @@
         ];
 
         home.stateVersion = "25.11";
-    };
-  }
+  };
+}
