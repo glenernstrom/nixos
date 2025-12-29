@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{config, pkgs, ... }:
 
 {
   home-manager.backupFileExtension = "bak";
@@ -18,7 +18,7 @@
 	./media.nix
 	./utilities.nix
 	./shell.nix
-	./ghostty.nix
+	./ghostty/ghostty.nix
 	./productivity.nix
         ];
 
