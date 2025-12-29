@@ -4,9 +4,6 @@
   programs.git = {
     enable = true;
 
-    user.name = "Glen Ernstrom";
-    user.email = "otterbrain@protonmail.com";
-
     aliases = {
       co = "checkout";
       br = "branch";
@@ -16,6 +13,8 @@
     };
 
     settings = {
+      user.name = "Glen Ernstrom";
+      user.email = "otterbrain@protonmail.com";
       init.defaultBranch = "main";
       pull.rebase = false;
       push.autoSetupRemote = true;

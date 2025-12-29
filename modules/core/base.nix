@@ -10,6 +10,7 @@
     curl
     wget
     xorg.xhost
+    pciutils
   ];
 
   services.dbus.enable = true;
