@@ -8,5 +8,7 @@
     audacity
     vlc
     ffmpeg
+    gnome-podcasts
+    cozy
   ];
 }
