@@ -4,7 +4,7 @@
   programs.git = {
     enable = true;
 
-    aliases = {
+    alias = {
       co = "checkout";
       br = "branch";
       st = "status";
