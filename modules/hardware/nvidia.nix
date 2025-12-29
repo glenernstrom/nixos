@@ -10,7 +10,7 @@
     powerManagement.enable = false;
     powerManagement.finegrained = false;
 
-    open = false; # RTX 3080 Ti requires proprietary driver
+    open = true;
     nvidiaSettings = true;
 
     package = config.boot.kernelPackages.nvidiaPackages.stable;
