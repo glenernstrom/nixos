@@ -1,63 +1,30 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
+  # Enable proprietary NVIDIA driver
+  services.xserver.videoDrivers = [ "nvidia" ];
+
   hardware.nvidia = {
     modesetting.enable = true;
 
-     # powerManagement.enable = false;
+    powerManagement.enable = false;
     powerManagement.finegrained = false;
 
-    open = true;
-
+    open = false; # RTX 3080 Ti requires proprietary driver
     nvidiaSettings = true;
 
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-   hardware.graphics.enable = true;
+  # New option name (replaced hardware.opengl.*)
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
 
-  # https://discourse.nixos.org/t/black-screen-after-suspend-hibernate-with-nvidia/54341/6
-  # https://discourse.nixos.org/t/suspend-problem/54033/28
-    systemd = {
-      # Uncertain if this is still required or not.
-      services.systemd-suspend.environment.SYSTEMD_SLEEP_FREEZE_USER_SESSIONS = "false";
-
-      services."gnome-suspend" = {
-        description = "suspend gnome shell";
-        before = [
-          "systemd-suspend.service"
-          "systemd-hibernate.service"
-          "nvidia-suspend.service"
-          "nvidia-hibernate.service"
-        ];
-        wantedBy = [
-          "systemd-suspend.service"
-          "systemd-hibernate.service"
-        ];
-        serviceConfig = {
-          Type = "oneshot";
-          ExecStart = ''${pkgs.procps}/bin/pkill -f -STOP ${pkgs.gnome-shell}/bin/gnome-shell'';
-        };
-      };
-      services."gnome-resume" = {
-        description = "resume gnome shell";
-        after = [
-          "systemd-suspend.service"
-          "systemd-hibernate.service"
-          "nvidia-resume.service"
-        ];
-        wantedBy = [
-          "systemd-suspend.service"
-          "systemd-hibernate.service"
-        ];
-        serviceConfig = {
-          Type = "oneshot";
-          ExecStart = ''${pkgs.procps}/bin/pkill -f -CONT ${pkgs.gnome-shell}/bin/gnome-shell'';
-        };
-      };
-    };
-
-    # https://discourse.nixos.org/t/black-screen-after-suspend-hibernate-with-nvidia/54341/23
-    hardware.nvidia.powerManagement.enable = true; 
+  # Required for NVIDIA + Wayland
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
 }
 
