@@ -17,6 +17,6 @@
    };
 
   # Load your Lua config
-  xdg.configFile."nvim/init.lua".source = ./nvim/lua/init.lua;
+  xdg.configFile."nvim/init.lua".source = ./nvim/init.lua;
 
 }
