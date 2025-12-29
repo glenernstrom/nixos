@@ -11,5 +11,6 @@
     eza
     bat
     neofetch
+  ];
 }
 
