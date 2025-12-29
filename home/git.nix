@@ -4,10 +4,10 @@
   programs.git = {
     enable = true;
 
-    userName  = "Glen Ernstrom";
-    userEmail = "otterbrain@protonmail.com";
+    user.name = "Glen Ernstrom";
+    user.email = "otterbrain@protonmail.com";
 
-    aliases = {
+    alias = {
       co = "checkout";
       br = "branch";
       st = "status";
@@ -15,7 +15,7 @@
       lg = "log --oneline --graph --decorate";
     };
 
-    extraConfig = {
+    settings = {
       init.defaultBranch = "main";
       pull.rebase = false;
       push.autoSetupRemote = true;
@@ -26,6 +26,7 @@
     };
   };
 
-  programs.git.delta.enable = true;
+  programs.delta.enable = true;
+  programs.delta.enableGitIntegration = true;
 }
 

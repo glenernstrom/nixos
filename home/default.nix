@@ -16,6 +16,7 @@
 	./media.nix
 	./coding.nix
 	./utilities.nix
+	./shell.nix
         ];
 
         home.stateVersion = "25.11";
