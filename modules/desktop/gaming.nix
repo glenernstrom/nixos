@@ -16,7 +16,5 @@
     gamemode
     lutris
     heroic
-    wineWowPackages.stable
-    protontricks
   ];
 }
