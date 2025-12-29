@@ -9,7 +9,7 @@
   };
 
   
-  programs.fish.enable = true:
+  programs.fish.enable = true;
 
   programs.fish.shellAliases = {
     rstudio = "echo \"Use: distrobox-enter -n science-r -- rstudio\"";
