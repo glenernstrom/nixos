@@ -7,7 +7,7 @@
     user.name = "Glen Ernstrom";
     user.email = "otterbrain@protonmail.com";
 
-    alias = {
+    aliases = {
       co = "checkout";
       br = "branch";
       st = "status";
