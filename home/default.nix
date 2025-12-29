@@ -3,9 +3,9 @@
   {
     home-manager.users.otterbrain = {
       imports = [
-      #  ./cli.nix
+        ./cli.nix
         ./git.nix
-      #  ./neovim.nix
+        ./neovim.nix
         ./gnome.nix
 	./reading.nix
 	./writing.nix
@@ -14,9 +14,9 @@
 	./internet.nix
 	./graphics.nix
 	./media.nix
-	./coding.nix
 	./utilities.nix
 	./shell.nix
+	./ghostty.nix
         ];
 
         home.stateVersion = "25.11";
