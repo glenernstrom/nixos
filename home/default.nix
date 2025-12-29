@@ -19,6 +19,7 @@
 	./utilities.nix
 	./shell.nix
 	./ghostty.nix
+	./productivity.nix
         ];
 
         home.stateVersion = "25.11";
