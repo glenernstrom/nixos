@@ -4,13 +4,13 @@
   programs.git = {
     enable = true;
 
-    alias = {
-      co = "checkout";
-      br = "branch";
-      st = "status";
-      ci = "commit";
-      lg = "log --oneline --graph --decorate";
-    };
+#    alias = {
+#      co = "checkout";
+#      br = "branch";
+#      st = "status";
+#      ci = "commit";
+#      lg = "log --oneline --graph --decorate";
+#    };
 
     settings = {
       user.name = "Glen Ernstrom";
