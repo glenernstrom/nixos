@@ -11,6 +11,7 @@
     wget
     xorg.xhost
     pciutils
+    nodejs_25
   ];
 
   services.dbus.enable = true;

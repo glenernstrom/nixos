@@ -7,6 +7,6 @@
     libreoffice
     citations
     joplin-desktop
-  #  jabref
+    apostrophe
     ];
 }
