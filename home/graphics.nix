@@ -5,5 +5,6 @@
     inkscape
     gimp
     scribus
+    darktable
   ];
 }
