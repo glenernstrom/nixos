@@ -6,7 +6,7 @@
 
   services.logind.settings.Login.HandleLidSwitch = "suspend";
 
-  services.tlp.enable = true;
+  services.tlp.enable = false;
 
   hardware.bluetooth.enable = true;
 
