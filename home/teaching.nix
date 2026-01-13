@@ -5,5 +5,6 @@
     xournalpp
     rnote
     anki
+    tesseract4
   ];
 }
