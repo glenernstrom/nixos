@@ -7,7 +7,7 @@
       imports = [
         ./cli.nix
         ./git.nix
-        ./neovim.nix
+        ./nvim/neovim.nix
         ./gnome.nix
 	./reading.nix
 	./writing.nix

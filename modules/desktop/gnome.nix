@@ -13,6 +13,12 @@
   # GNOME needs deconf
   programs.dconf.enable = true;
 
+  # Provide GNOME Qt integration
+   qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark";
+  };
 
   # GNOME keyring (needed for Git, browsers, Wi-Fi, etc.)
   services.gnome.gnome-keyring.enable = true;

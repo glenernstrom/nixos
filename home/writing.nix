@@ -7,6 +7,8 @@
     libreoffice
     citations
     joplin-desktop
-    apostrophe
+    pandoc
+    hunspell
+    hunspellDicts.en_US
     ];
 }

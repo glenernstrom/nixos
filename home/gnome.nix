@@ -7,5 +7,6 @@
     gnome-tweaks
     gnome-extension-manager
   ];
+
 }
 

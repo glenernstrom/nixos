@@ -9,7 +9,7 @@
     text = ''
       theme = catppuccin-mocha
       font-family = JetBrainsMono Nerd Font
-      font-size = 12
+      font-size = 14
     '';
     force = true;
   };
