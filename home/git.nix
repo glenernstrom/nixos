@@ -21,7 +21,6 @@
       fetch.prune = true;
       core.editor = "nvim";
       color.ui = "auto";
-      credential.helper = "libsecret";
     };
   };
 

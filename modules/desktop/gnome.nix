@@ -21,7 +21,7 @@
   };
 
   # GNOME keyring (needed for Git, browsers, Wi-Fi, etc.)
-  services.gnome.gnome-keyring.enable = true;
+ # services.gnome.gnome-keyring.enable = true;
 
   # Portals (Wayland + Flatpak compatibility, even if you don’t use Flatpak)
   xdg.portal.enable = true;
