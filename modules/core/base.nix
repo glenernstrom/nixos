@@ -13,7 +13,7 @@
     pciutils
     nodejs_25
   ];
-
+  environment.localBinInPath = true;
   services.dbus.enable = true;
 }
 
