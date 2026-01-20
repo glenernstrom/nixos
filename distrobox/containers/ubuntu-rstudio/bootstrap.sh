@@ -26,8 +26,10 @@ sudo apt-get install -y r-base r-base-dev
 sudo apt-get install -y build-essential gfortran
 
 # --- Install RStudio Desktop (downloaded .deb) ---
+# Install RStudio Desktop (latest)
 cd /tmp
-wget -O rstudio.deb "https://download1.rstudio.org/electron/jammy/amd64/rstudio-2024.12.0-467-amd64.deb"
+wget -O rstudio.deb \
+  https://download1.rstudio.org/electron/jammy/amd64/rstudio-2026.01.0-392-amd64.deb
 sudo gdebi -n rstudio.deb
 
 # --- Set default CRAN mirror for all users (avoid interactive prompt) ---

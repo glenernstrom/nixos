@@ -25,7 +25,8 @@ run_bootstrap () {
 export_app () {
   local name="$1"
   local app="$2"
-  distrobox-export --box "$name" --app "$app" || true
+  distrobox enter "$name" -- distrobox-export --app "$app" || true
+
 }
 
 create_if_missing ubuntu-fiji ubuntu:24.04 "$HOME/.local/share/distrobox/ubuntu-fiji"
