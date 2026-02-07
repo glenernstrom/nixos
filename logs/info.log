@@ -1,0 +1,54 @@
+2026-01-16 08:51:31,383 INFO s.s.S.SPDFApplication [main] Additional features in jar
+2026-01-16 08:51:31,384 INFO s.s.c.c.ConfigInitializer [main] Current settings file line count: 0
+2026-01-16 08:51:31,387 INFO s.s.c.c.ConfigInitializer [main] Created settings file from template
+2026-01-16 08:51:31,387 INFO s.s.c.c.ConfigInitializer [main] Created custom_settings file: ./configs/custom_settings.yml
+2026-01-16 08:51:31,387 INFO s.s.S.SPDFApplication [main] Settings file: ./configs/settings.yml
+2026-01-16 08:51:31,387 INFO s.s.S.SPDFApplication [main] Custom settings file: ./configs/custom_settings.yml
+2026-01-16 08:51:31,813 INFO s.s.S.SPDFApplication [main] Starting SPDFApplication v1.5.0 using Java 21.0.9 with PID 14708 (/nix/store/2x6aaz7gsqmgf2ynibc4g8di536nmd33-stirling-pdf-1.5.0/share/stirling-pdf/Stirling-PDF.jar started by otterbrain in /home/otterbrain/nixos)
+2026-01-16 08:51:31,813 INFO s.s.S.SPDFApplication [main] The following 1 profile is active: "security"
+2026-01-16 08:51:34,690 INFO s.s.p.s.c.DatabaseConfig [main] Using default H2 database
+2026-01-16 08:51:36,922 INFO s.s.c.c.TempFileConfiguration [main] Created temporary directory: /tmp/stirling-pdf
+2026-01-16 08:51:36,955 WARN s.s.S.c.ExternalAppDepConfig [main] Missing dependency: gs - Disabling group: Ghostscript (Affected features: Replace Invert PDF, Repair, Compress PDF, Vector To PDF, PDF To Vector, Crop)
+2026-01-16 08:51:36,968 WARN s.s.S.c.ExternalAppDepConfig [main] Missing dependency: ocrmypdf - Disabling group: OCRmyPDF (Affected features: Ocr PDF)
+2026-01-16 08:51:37,008 WARN s.s.S.c.ExternalAppDepConfig [main] Missing dependency: qpdf - Disabling group: qpdf (Affected features: Repair, Compress PDF)
+2026-01-16 08:51:37,020 WARN s.s.S.c.ExternalAppDepConfig [main] Missing dependency: weasyprint - Disabling group: Weasyprint (Affected features: Eml To PDF, Markdown To PDF, Url To PDF, Html To PDF)
+2026-01-16 08:51:37,031 WARN s.s.S.c.ExternalAppDepConfig [main] Missing dependency: pdftohtml - Disabling group: Pdftohtml (Affected features: PDF To Html, PDF To Markdown)
+2026-01-16 08:51:37,044 WARN s.s.S.c.ExternalAppDepConfig [main] Missing dependency: unoconvert - Disabling group: Unoconvert (Affected features: File To PDF)
+2026-01-16 08:51:37,058 WARN s.s.S.c.ExternalAppDepConfig [main] Missing dependency: rar - Disabling group: rar (Affected features: PDF To Cbr)
+2026-01-16 08:51:37,110 WARN s.s.S.c.ExternalAppDepConfig [main] OpenCV not available in Python - Disabling OpenCV features: Extract Image Scans
+2026-01-16 08:51:37,111 INFO s.s.S.c.EndpointConfiguration [main] Disabled tool groups: Ghostscript, OCRmyPDF, OpenCV, Pdftohtml, Unoconvert, Weasyprint, qpdf, rar (endpoints may have alternative implementations)
+2026-01-16 08:51:37,111 INFO s.s.S.c.EndpointConfiguration [main] Disabled functional groups: enterprise
+2026-01-16 08:51:37,111 INFO s.s.S.c.EndpointConfiguration [main] Total disabled endpoints: 11. Disabled endpoints: crop, eml-to-pdf, extract-image-scans, html-to-pdf, pdf-to-cbr, pdf-to-markdown, pdf-to-vector, repair, replace-invert-pdf, url-to-pdf, vector-to-pdf
+2026-01-16 08:51:37,320 INFO s.s.p.s.s.DatabaseService [main] Source directory does not exist: configs/db/backup
+2026-01-16 08:51:37,704 INFO s.s.c.u.FileMonitor [main] Monitoring directory: ./pipeline/watchedFolders
+2026-01-16 08:51:38,038 INFO s.s.c.s.TempFileCleanupService [main] Created LibreOffice temp directory: /tmp/stirling-pdf/libreoffice
+2026-01-16 08:51:38,038 INFO s.s.c.s.TempFileCleanupService [main] Running in Server-jar mode, using conservative cleanup strategy
+2026-01-16 08:51:38,039 INFO s.s.c.s.TempFileCleanupService [main] Startup cleanup complete. Deleted 0 temporary files/directories
+2026-01-16 08:51:38,493 INFO s.s.p.s.s.DatabaseService [main] Database export completed: configs/backup/db/backup_202601160851.sql
+2026-01-16 08:51:38,494 INFO s.s.p.s.InitialSecuritySetup [main] Default admin user created: admin
+2026-01-16 08:51:38,555 INFO s.s.p.s.s.DatabaseService [main] Database export completed: configs/backup/db/backup_202601160851.sql
+2026-01-16 08:51:38,571 INFO s.s.p.s.s.DatabaseService [main] Database export completed: configs/backup/db/backup_202601160851.sql
+2026-01-16 08:51:38,571 INFO s.s.p.s.InitialSecuritySetup [main] Internal API user created: STIRLING-PDF-BACKEND-API-USER
+2026-01-16 08:51:39,767 INFO s.s.c.s.JobQueue [main] Starting JobQueue lifecycle
+2026-01-16 08:51:39,796 INFO s.s.S.SPDFApplication [main] Started SPDFApplication in 8.407 seconds (process running for 9.016)
+2026-01-16 08:51:39,799 WARN s.s.c.u.FileMonitor [scheduling-1] not monitoring any directory, even the root directory itself: ./pipeline/watchedFolders
+2026-01-16 08:51:39,801 INFO s.s.S.SPDFApplication [main] Stirling-PDF Started.
+2026-01-16 08:51:39,801 INFO s.s.S.c.a.p.PipelineDirectoryProcessor [scheduling-1] Created directory: /home/otterbrain/nixos/./pipeline/watchedFolders
+2026-01-16 08:51:39,801 INFO s.s.S.SPDFApplication [main] Navigate to http://localhost:8080/
+2026-01-16 08:51:39,803 INFO s.s.c.s.TempFileCleanupService [scheduling-1] Running scheduled temporary file cleanup
+2026-01-16 08:51:39,803 INFO s.s.c.u.TempFileManager [scheduling-1] Cleaned up 0 old temporary files
+2026-01-16 08:51:39,803 INFO s.s.c.s.TempFileCleanupService [scheduling-1] Cleaned up 0 registered temporary files
+2026-01-16 08:51:44,795 WARN s.s.c.u.FileMonitor [scheduling-1] not monitoring any directory, even the root directory itself: ./pipeline/watchedFolders
+2026-01-16 08:51:44,796 INFO s.s.c.u.FileMonitor [scheduling-1] Registered directory: ./pipeline/watchedFolders
+2026-01-16 08:57:32,745 INFO s.s.S.c.a.EditTableOfContentsController [qtp994228009-82] No outline/bookmarks found in PDF
+2026-01-16 08:57:32,749 INFO o.a.p.e.u.DeletingRandomAccessFile [qtp994228009-82] Successfully deleted temp file: /tmp/stirling-pdf/stirling-pdf-1544387403921557233.tmp
+2026-01-16 08:59:15,210 INFO o.a.p.e.u.DeletingRandomAccessFile [qtp994228009-61] Successfully deleted temp file: /tmp/stirling-pdf/stirling-pdf-1376085438126980100.tmp
+2026-01-16 09:02:33,102 INFO o.a.p.e.u.DeletingRandomAccessFile [qtp994228009-91] Successfully deleted temp file: /tmp/stirling-pdf/stirling-pdf-1816881490971184867.tmp
+2026-01-16 09:02:49,147 INFO s.s.c.c.TempFileShutdownHook [Thread-10] Shutdown cleanup complete. Deleted 0 temporary files/directories
+2026-01-16 09:02:49,152 INFO s.s.c.s.JobQueue [SpringApplicationShutdownHook] Stopping JobQueue lifecycle
+2026-01-16 09:02:49,152 INFO s.s.c.s.JobQueue [SpringApplicationShutdownHook] Shutting down job queue
+2026-01-16 09:02:49,153 INFO s.s.c.s.JobQueue [SpringApplicationShutdownHook] Job queue shutdown complete. Stats: total=0, rejected=0
+2026-01-16 09:02:49,155 INFO s.s.c.c.TempFileShutdownHook [SpringApplicationShutdownHook] Application shutting down, cleaning up temporary files
+2026-01-16 09:02:49,155 INFO s.s.c.c.TempFileShutdownHook [SpringApplicationShutdownHook] Shutdown cleanup complete. Deleted 0 temporary files/directories
+2026-01-16 09:02:49,156 INFO s.s.c.s.ResourceMonitor [SpringApplicationShutdownHook] Shutting down resource monitoring
+2026-01-16 09:02:49,156 INFO s.s.c.s.TaskManager [SpringApplicationShutdownHook] Shutting down job result cleanup executor
