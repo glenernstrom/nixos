@@ -29,6 +29,9 @@
     xdg-desktop-portal-gnome
   ];
 
-
+  environment.systemPackages = with pkgs; [
+    xdg-desktop-portal
+    xdg-desktop-portal-gnome
+  ];
  }
 
