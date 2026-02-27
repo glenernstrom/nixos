@@ -3,8 +3,9 @@
 { 
   home.packages = with pkgs; [
     bitwarden-desktop
-    impression
+#    impression
     desktop-file-utils
-    parabolic
+#    parabolic
+#    alsa-utils
   ];
 }

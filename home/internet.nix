@@ -5,12 +5,12 @@
     mumble
     element-desktop
     fractal
-    slack
-    discord
-    zoom-us
-    microsoft-edge
-    firefox
-    chromium
+#    slack
+#    discord
+#    zoom-us
+#    microsoft-edge
+#    firefox
+#    chromium
     pcloud
   ];
 }

@@ -2,9 +2,9 @@
 
 {
   home.packages = with pkgs; [
-    xournalpp
-    rnote
-    anki
+#    xournalpp
+#    rnote
+#    anki
     tesseract4
   ];
 }

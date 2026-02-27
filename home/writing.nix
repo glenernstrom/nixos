@@ -5,8 +5,8 @@
     texliveFull
     texmaker
     libreoffice
-    citations
-    joplin-desktop
+#    citations
+#    joplin-desktop
     pandoc
     hunspell
     hunspellDicts.en_US
