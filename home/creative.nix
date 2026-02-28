@@ -5,5 +5,6 @@
     inkscape
     gimp
     pdfarranger
+    ffmpeg
   ];
 }

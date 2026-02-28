@@ -2,13 +2,14 @@
 
 {
   home.packages = with pkgs; [
-    texliveFull
     texmaker
-    libreoffice
-#    citations
-#    joplin-desktop
     pandoc
+    libreoffice
     hunspell
     hunspellDicts.en_US
     ];
+
+    programs.bash.enable = true;
+
+    programs.fish.enable = true;
 }

@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+
+  programs.gamemode.enable = true;
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
@@ -8,8 +11,6 @@
   };
 
   hardware.steam-hardware.enable = true;
-
-#  hardware.gamemode.enable = true;
 
   environment.systemPackages = with pkgs; [
     mangohud

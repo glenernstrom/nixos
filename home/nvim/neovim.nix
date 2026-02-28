@@ -9,7 +9,6 @@
     plugins = with pkgs.vimPlugins; [
       catppuccin-nvim
       lualine-nvim
-      telescope-nvim
       plenary-nvim
       nvim-web-devicons
       nvim-treesitter

@@ -1,11 +1,16 @@
 { pkgs, ... }:
 
-{ 
+{
+
+
+  programs.pay-respects = {
+    enable = true;
+  };
+
+
   home.packages = with pkgs; [
     bitwarden-desktop
-#    impression
     desktop-file-utils
-#    parabolic
-#    alsa-utils
+    tesseract4
   ];
 }

@@ -9,9 +9,7 @@
     git
     curl
     wget
-    xorg.xhost
-    pciutils
-    nodejs_25
+    distrobox
   ];
   environment.localBinInPath = true;
   services.dbus.enable = true;
