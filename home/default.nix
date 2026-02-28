@@ -13,7 +13,7 @@
         ./distrobox-apps.nix
 	      ./utilities.nix
 	      ./ghostty/ghostty.nix
-        ./latex.nix
+        ./latex-wrappers.nix
         ];
 
         home.stateVersion = "25.11";
