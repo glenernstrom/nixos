@@ -1,0 +1,3 @@
+# Flatpaks
+
+- Microsoft Edge

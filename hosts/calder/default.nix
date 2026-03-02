@@ -1,9 +1,8 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
   networking.hostName = "calder";
 
   imports = [
@@ -11,6 +10,5 @@
 
     ../../modules/hardware/cpu-amd.nix
     ../../modules/hardware/nvidia.nix
-    ../../modules/desktop/gaming.nix
     ];
 }

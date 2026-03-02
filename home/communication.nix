@@ -8,9 +8,5 @@
     slack
     discord
     zoom-us
-    microsoft-edge
-    firefox
-    chromium
-    pcloud
   ];
 }

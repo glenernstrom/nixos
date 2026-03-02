@@ -2,6 +2,14 @@
 
 {
   home.packages = with pkgs; [
-    super-productivity
-  ];
+    texmaker
+    pandoc
+    libreoffice
+    hunspell
+    hunspellDicts.en_US
+    ];
+
+    programs.bash.enable = true;
+
+    programs.fish.enable = true;
 }

@@ -5,22 +5,15 @@
 
   home-manager.users.otterbrain = {
       imports = [
-        ./cli.nix
+        ./creative.nix
+        ./communication.nix
+        ./productivity.nix
         ./git.nix
         ./nvim/neovim.nix
-        ./gnome.nix
-      	./reading.nix
-	      ./writing.nix
-	      ./teaching.nix
-	      ./science.nix
         ./distrobox-apps.nix
-	      ./internet.nix
-	      ./graphics.nix
-	      ./media.nix
 	      ./utilities.nix
-	      ./shell.nix
 	      ./ghostty/ghostty.nix
-	      ./productivity.nix
+        ./latex-wrappers.nix
         ];
 
         home.stateVersion = "25.11";

@@ -14,79 +14,91 @@
   let
     system = "x86_64-linux";
 
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
+    # Reusable module: allow unfree + overlay workaround
+    commonNixpkgs = {
+      nixpkgs.config.allowUnfree = true;
+
+      nixpkgs.overlays = [
+        (final: prev: {
+          python313Packages = prev.python313Packages.overrideScope
+            (pyFinal: pyPrev: {
+              picosvg = pyPrev.picosvg.overridePythonAttrs (old: {
+                doCheck = false;
+              });
+
+              nanoemoji = pyPrev.nanoemoji.overridePythonAttrs (old: {
+                doCheck = false;
+              });
+            });
+        })
+      ];
+    };
+
+    commonHM = {
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
     };
   in {
     nixosConfigurations = {
       mondrian = nixpkgs.lib.nixosSystem {
-        inherit system pkgs;
-	modules = [
-	  ./hosts/mondrian
-	  ./roles/laptop.nix
-	  ./modules/core
-	  ./modules/services
-	  ./modules/desktop
-	  home-manager.nixosModules.home-manager
-	  { 
-	    home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-	  }
-	  ./home
-	];
+        inherit system;
+        modules = [
+          commonNixpkgs
+          ./hosts/mondrian
+          ./roles/laptop.nix
+          ./modules/core
+          ./modules/services
+          ./modules/desktop
+          home-manager.nixosModules.home-manager
+          commonHM
+          ./home
+        ];
       };
 
       ernst = nixpkgs.lib.nixosSystem {
-        inherit system pkgs;
-	modules = [
-	  ./hosts/ernst
-	  ./roles/laptop.nix
-	  ./modules/core
-	  ./modules/services
-	  ./modules/desktop
-	  home-manager.nixosModules.home-manager
-	  {
-	    home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-	  }
-	  ./home
-	 ];
-       };
+        inherit system;
+        modules = [
+          commonNixpkgs
+          ./hosts/ernst
+          ./roles/laptop.nix
+          ./modules/core
+          ./modules/services
+          ./modules/desktop
+          home-manager.nixosModules.home-manager
+          commonHM
+          ./home
+        ];
+      };
 
       calder = nixpkgs.lib.nixosSystem {
-        inherit system pkgs;
-	modules = [
-	  ./hosts/calder
-	  ./roles/desktop.nix
-	  ./modules/core
-	  ./modules/services
-	  ./modules/desktop
-	  home-manager.nixosModules.home-manager
-	  {
-	    home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-	  }
-	  ./home
-	 ];
-       };
+        inherit system;
+        modules = [
+          commonNixpkgs
+          ./hosts/calder
+          ./roles/desktop.nix
+          ./modules/core
+          ./modules/services
+          ./modules/desktop
+          home-manager.nixosModules.home-manager
+          commonHM
+          ./home
+        ];
+      };
 
-       rothko = nixpkgs.lib.nixosSystem {
-        inherit system pkgs;
-	modules = [
-	  ./hosts/rothko
-	  ./roles/laptop.nix
-	  ./modules/core
-	  ./modules/services
-	  ./modules/desktop
-	  home-manager.nixosModules.home-manager
-	  {
-             home-manager.useGlobalPkgs = true;
-             home-manager.useUserPackages = true;
-	  }
-	  ./home
-	 ];
-       };
-     };
-   };
+      rothko = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          commonNixpkgs
+          ./hosts/rothko
+          ./roles/laptop.nix
+          ./modules/core
+          ./modules/services
+          ./modules/desktop
+          home-manager.nixosModules.home-manager
+          commonHM
+          ./home
+        ];
+      };
+    };
+  };
 }
