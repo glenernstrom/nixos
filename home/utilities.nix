@@ -5,6 +5,6 @@
     bitwarden-desktop
     impression
     desktop-file-utils
-    parabolic
+    yt-dlp
   ];
 }
