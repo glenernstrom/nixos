@@ -46,6 +46,8 @@
   gnome-logs
   gnome-system-monitor
   gnome-tour
+  gnome-calculator
+  gnome-software
   ];
 
   services.xserver.excludePackages = [ pkgs.xterm ];
