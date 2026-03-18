@@ -33,5 +33,23 @@
     xdg-desktop-portal
     xdg-desktop-portal-gnome
   ];
+
+  environment.gnome.excludePackages = with pkgs; [
+  gnome-weather
+  gnome-maps
+  gnome-contacts
+  gnome-calendar
+  gnome-clocks
+  gnome-characters
+  yelp
+  gnome-font-viewer
+  gnome-logs
+  gnome-system-monitor
+  gnome-tour
+  ];
+
+  services.xserver.excludePackages = [ pkgs.xterm ];
+
+
  }
 
