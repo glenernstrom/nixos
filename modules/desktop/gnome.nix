@@ -9,6 +9,7 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "otterbrain";
   services.desktopManager.gnome.enable = true;
+  services.gnome.core-apps.enable = true;
 
   # GNOME needs deconf
   programs.dconf.enable = true;
@@ -35,19 +36,6 @@
   ];
 
   environment.gnome.excludePackages = with pkgs; [
-  gnome-weather
-  gnome-maps
-  gnome-contacts
-  gnome-calendar
-  gnome-clocks
-  gnome-characters
-  yelp
-  gnome-font-viewer
-  gnome-logs
-  gnome-system-monitor
-  gnome-tour
-  gnome-calculator
-  gnome-software
   ];
 
   services.xserver.excludePackages = [ pkgs.xterm ];
