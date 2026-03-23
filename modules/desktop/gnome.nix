@@ -9,6 +9,7 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "otterbrain";
   services.desktopManager.gnome.enable = true;
+  services.gnome.core-apps.enable = true;
 
   # GNOME needs deconf
   programs.dconf.enable = true;
@@ -33,5 +34,11 @@
     xdg-desktop-portal
     xdg-desktop-portal-gnome
   ];
+
+  environment.gnome.excludePackages = with pkgs; [
+
+  ];
+
+  services.xserver.excludePackages = [ pkgs.xterm ];
  }
 

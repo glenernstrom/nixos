@@ -2,10 +2,10 @@
   description = "Glen's NixOS multimachine config";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
 
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -18,20 +18,20 @@
     commonNixpkgs = {
       nixpkgs.config.allowUnfree = true;
 
-      nixpkgs.overlays = [
-        (final: prev: {
-          python313Packages = prev.python313Packages.overrideScope
-            (pyFinal: pyPrev: {
-              picosvg = pyPrev.picosvg.overridePythonAttrs (old: {
-                doCheck = false;
-              });
+     # nixpkgs.overlays = [
+     #   (final: prev: {
+     #     python313Packages = prev.python313Packages.overrideScope
+     #       (pyFinal: pyPrev: {
+     #         picosvg = pyPrev.picosvg.overridePythonAttrs (old: {
+     #           doCheck = false;
+     #         });
 
-              nanoemoji = pyPrev.nanoemoji.overridePythonAttrs (old: {
-                doCheck = false;
-              });
-            });
-        })
-      ];
+     #         nanoemoji = pyPrev.nanoemoji.overridePythonAttrs (old: {
+     #           doCheck = false;
+     #         });
+     #       });
+     #   })
+     # ];
     };
 
     commonHM = {
