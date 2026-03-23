@@ -11,5 +11,6 @@
   home.packages = with pkgs; [
     tesseract4
     warp
+    bitwarden-desktop
   ];
 }

@@ -90,7 +90,7 @@
         modules = [
           commonNixpkgs
           ./hosts/rothko
-          ./roles/laptop.nix
+          ./roles/desktop.nix
           ./modules/core
           ./modules/services
           ./modules/desktop
