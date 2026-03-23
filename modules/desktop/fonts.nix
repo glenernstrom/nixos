@@ -13,6 +13,7 @@
       dejavu_fonts
       fira-code
       jetbrains-mono
+      nerd-fonts.jetbrains-mono
     ];
 
     fontconfig.defaultFonts = {

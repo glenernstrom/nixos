@@ -13,7 +13,5 @@
 
   # --- Gaming/QoL tools ---
   environment.systemPackages = with pkgs; [
-    mesa-demos     # provides glxinfo
-    vulkan-tools   # useful for debugging Vulkan/driver stack
   ];
 }
