@@ -2,7 +2,7 @@
 
 { 
   home.packages = with pkgs; [
-    mumble
-    fractal
+   fractal
+   zoom-us
   ];
 }

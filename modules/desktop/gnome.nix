@@ -36,10 +36,17 @@
   ];
 
   environment.gnome.excludePackages = with pkgs; [
+<<<<<<< HEAD
+
+  ];
+
+  services.xserver.excludePackages = [ pkgs.xterm ];
+=======
   ];
 
   services.xserver.excludePackages = [ pkgs.xterm ];
 
 
+>>>>>>> 48fcf14df0180ad4bf54c4c937e608b41fb4d307
  }
 
