@@ -3,6 +3,13 @@
 {
   home.packages = with pkgs; [
     texmaker
+    pdfarranger
+    texliveFull
+    rnote
+    libreoffice
+    hunspell
+    hunspellDicts.en_US
+    super-productivity
     ];
 
     programs.bash.enable = true;
