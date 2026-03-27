@@ -8,6 +8,7 @@
 
     plugins = with pkgs.vimPlugins; [
       catppuccin-nvim
+     # tokyonight-nvim
       lualine-nvim
       plenary-nvim
       nvim-web-devicons
