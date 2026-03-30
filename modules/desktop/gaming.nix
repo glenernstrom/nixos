@@ -12,6 +12,4 @@
   hardware.steam-hardware.enable = true;
 
   # --- Gaming/QoL tools ---
-  environment.systemPackages = with pkgs; [
-  ];
 }
