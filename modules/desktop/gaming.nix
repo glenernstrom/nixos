@@ -9,7 +9,9 @@
   };
 
   # Steam controller / VR / etc udev rules
-  hardware.steam-hardware.enable = true;
+    hardware.steam-hardware.enable = true;
 
   # --- Gaming/QoL tools ---
+#  environment.systemPackages = with pkgs; [
+#  ];
 }
