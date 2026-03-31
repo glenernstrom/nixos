@@ -21,7 +21,7 @@
     style = "adwaita-dark";
   };
 
-  # GNOME keyring (needed for Git, browsers, Wi-Fi, etc.)
+ # GNOME keyring (needed for Git, browsers, Wi-Fi, etc.)
  # services.gnome.gnome-keyring.enable = true;
 
   # Portals (Wayland + Flatpak compatibility, even if you don’t use Flatpak)
@@ -35,18 +35,11 @@
     xdg-desktop-portal-gnome
   ];
 
-  environment.gnome.excludePackages = with pkgs; [
-<<<<<<< HEAD
-
-  ];
-
-  services.xserver.excludePackages = [ pkgs.xterm ];
-=======
+   environment.gnome.excludePackages = with pkgs; [
+    geary
   ];
 
   services.xserver.excludePackages = [ pkgs.xterm ];
 
-
->>>>>>> 48fcf14df0180ad4bf54c4c937e608b41fb4d307
  }
 
