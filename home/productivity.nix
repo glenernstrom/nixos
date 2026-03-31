@@ -12,6 +12,7 @@
     super-productivity
     apostrophe
     joplin-desktop
+    planify
     ];
 
     programs.bash.enable = true;
