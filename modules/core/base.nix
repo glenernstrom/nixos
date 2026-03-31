@@ -5,6 +5,8 @@
 
   documentation.enable = true;
 
+  nix.settings.download-buffer-size = 524288000;
+  
   environment.systemPackages = with pkgs; [
     git
     curl
