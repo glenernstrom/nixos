@@ -1,4 +1,4 @@
-{ pkgs, lib, config ... }:
+{ pkgs, lib, config, ... }:
 
 { 
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -11,7 +11,7 @@
   programs.fuse.userAllowOther = true;
 
 
-  programs.deconf.profiles.user.dataases = [
+  programs.dconf.profiles.user.databases = [
    {
      settings = {
       "org/gnome/mutter" = {
