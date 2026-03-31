@@ -5,5 +5,7 @@
    fractal
    zoom-us
    mumble
+   firefox
+   microsoft-edge
   ];
 }
