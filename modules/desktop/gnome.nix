@@ -33,6 +33,7 @@
   environment.systemPackages = with pkgs; [
     xdg-desktop-portal
     xdg-desktop-portal-gnome
+    yelp
   ];
 
    environment.gnome.excludePackages = with pkgs; [

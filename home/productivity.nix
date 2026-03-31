@@ -10,6 +10,7 @@
     hunspell
     hunspellDicts.en_US
     super-productivity
+    apostrophe
     ];
 
     programs.bash.enable = true;
