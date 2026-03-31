@@ -11,6 +11,7 @@
     hunspellDicts.en_US
     super-productivity
     apostrophe
+    joplin-desktop
     ];
 
     programs.bash.enable = true;
