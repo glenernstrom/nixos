@@ -34,6 +34,7 @@
     xdg-desktop-portal
     xdg-desktop-portal-gnome
     yelp
+    gnome-extension-manager
   ];
 
    environment.gnome.excludePackages = with pkgs; [
