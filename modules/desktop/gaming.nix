@@ -13,5 +13,12 @@
 
   environment.systemPackages = with pkgs; [
     aisleriot
+    zeroad-unwrapped
+    lutris
+    cartridges
+    gnome-chess
+    gnome-sudoku
+    gnome-klotski
+    gnome-taquin
   ];
 }

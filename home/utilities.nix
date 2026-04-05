@@ -12,5 +12,5 @@
     tesseract4
     warp
     bitwarden-desktop
-  ];
+   ];
 }
