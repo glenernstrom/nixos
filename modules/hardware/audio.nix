@@ -8,4 +8,7 @@
     pulse.enable = true;
   };
 
+  environment.systemPackages = [
+    (pkgs.mumble.override { pulseSupport = true; })
+  ];
 }
