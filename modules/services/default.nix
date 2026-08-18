@@ -1,7 +1,8 @@
-{
+
   imports = [
     ./containers.nix
-#    ./vm.nix
+    ./vm.nix
+    ./radicale.nix
    ];
 
 }
